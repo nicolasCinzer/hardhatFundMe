@@ -1,4 +1,10 @@
 {
+  "name": "hardhat-fund-me",
+  "author": {
+    "name": "Nicolas Cinzer",
+    "email": "nicolas.cinzer00@gmail.com"
+  },
+  "version": "1.0.0",
   "devDependencies": {
     "@chainlink/contracts": "^0.4.1",
     "@ethersproject/abi": "^5.4.7",
@@ -11,11 +17,20 @@
     "@typechain/ethers-v5": "^10.1.0",
     "@typechain/hardhat": "^6.1.2",
     "chai": "^4.2.0",
+    "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
     "hardhat": "^2.10.0",
     "hardhat-deploy": "^0.11.11",
     "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^2.7.1",
+    "solhint": "^3.3.7",
     "solidity-coverage": "^0.7.21",
     "typechain": "^8.1.0"
+  },
+  "scripts": {
+    "test": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network rinkeby",
+    "format": "yarn prettier --write .",
+    "coverage": "yarn hardhat coverage"
   }
 }
